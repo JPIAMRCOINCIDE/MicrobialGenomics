@@ -11,7 +11,7 @@ ask for help, or arrive early on the first day to
 get help.
 
 ## Windows
-### Putty - Not needed for the Cocalc based course
+### Putty - Not needed for the Jupyterhub based course
 You will need a terminal program to access the remote machine. This is already available on Mac and Linux.
 - Go to the [Putty download page](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
 - Click on putty.exe link to download the install file
@@ -20,7 +20,7 @@ You will need a terminal program to access the remote machine. This is already a
 
 ## Linux, Windows and Mac 
 
-### FTP Client (Filezilla) - Not needed for the Cocalc based course
+### FTP Client (Filezilla) - Not needed for the Jupyterhub based course
 An FTP client will help you transfer files easily between your computer and the cloud.
 
 - Go to the [Filezilla](https://filezilla-project.org/download.php?show_all=1) download page
