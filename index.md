@@ -11,6 +11,7 @@ COINCIDE edition.
 >  
 > 1.  Working with genome assemblies, QC and annotation of genomes
 > 2.  Pangenome analysis, genomic phylogenetic trees and GWAS
+> 3.  Sequence type, resistance genes, mutations and plasmids
 
 > ## Data
 >
