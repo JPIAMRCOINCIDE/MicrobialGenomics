@@ -20,8 +20,8 @@ In the previous lesson you have investigated the number of contigs. Other statis
 Getting the genome size is basically just counting the bases in a fasta file and excluding the fasta header (containing ">"). Unfortunately the end of line character ("\n") needs to be removed as well as else this character will be counted as well. We use the GNU tool "tr" for that.  
 
 ~~~
-$ cd ~/assembly/ERR326690
-$ cat scaffolds.fasta |grep -v ">" |tr -d "\n" | wc -c
+$ cd ~/assembly/barcode02
+$ cat assembly.fasta |grep -v ">" |tr -d "\n" | wc -c
 ~~~
 {: .bash}
 
@@ -38,11 +38,12 @@ We can generate the N50, the N75 or N90 by hand, but we will also be making use 
 
 Quast can be run by the following commandline and will generate a folder called quast_ERR326690 containing interesting statistics. Read the file report.txt.
 ~~~
-$ quast.py scaffolds.fasta -o quast_ERR326690 --min-contig 0
+$ cd ~/assembly/barcode02/
+$ quast.py assembly.fasta -o quast_barcode02 --min-contig 0
 ~~~
 {: .bash}
 
-The contig sizes from an assembly by SPAdes can be obtained by:
+The contig sizes from an assembly by Flye can be obtained by:
 ~~~
 $ cat scaffolds.fasta  |grep ">" |cut -f 4 -d _
 ~~~
@@ -71,20 +72,20 @@ $ checkm taxon_list > taxonlist.txt
 ~~~
 {: .bash}
 
-Obviously we want to select the closest match as possible. In the case of E. coli, we would choose "Escherichia coli". 
+Obviously we want to select the closest match as possible. In the case of e.g. Streptococcus pneumoniae, we would choose "Streptococcus pneumoniae". 
 
 
-CheckM can be run by the following commandline in the case of an E. coli genome called genome.fasta in the current folder (".") using the following command line. All output is stored in the folder checkmout and a useful table is checkmoutput.tsv. 
+CheckM can be run by the following commandline in the case of an Streptococcus pneumoniae genome called genome.fasta in the current folder (".") using the following command line. All output is stored in the folder checkmout and a useful table is checkmoutput.tsv. 
 ~~~
 $ 
-$ checkm taxonomy_wf species "Escherichia coli" . checkmout -t 1 -x genome.fasta  >checkmoutput.tsv
+$ checkm taxonomy_wf species "Streptococcus pneumoniae" . checkmout -t 1 -x genome.fasta  >checkmoutput.tsv
 ~~~
 {: .bash}
 
 It is possible to run the commmand on multiple genomes for faster analyses in the folder called "genomes" on all files with the extension (-x) .fasta:
 
 ~~~
-$ checkm taxonomy_wf species "Escherichia coli" genomes checkmout -t 1 -x fasta  >checkmoutput.tsv
+$ checkm taxonomy_wf species "Streptococcus pneumoniae" genomes checkmout -t 1 -x fasta  >checkmoutput.tsv
 ~~~
 {: .bash}
 
@@ -93,7 +94,7 @@ The file checkmoutput.tsv contains three relevant outputs: completeness, contami
 > ## Challenge: What is the quality of your genome assemblies
 >
 >  Determine the number of contigs, assembly sizes, N50, completeness for your genomes and enter these in this
-> [table](https://docs.google.com/spreadsheets/d/1b8BPKcSUuW2YzgHdMaJN3MEbdgroRJa1dWnf5gkHr9M/edit#gid=0)
+> [table](https://docs.google.com/spreadsheets/d/1KI0KA0Rcbg3pKrFRDKikrj4Mdo5pmV60nOodNzNtZp4/edit#gid=0) . __Make sure to select the correct species for CheckM__!
 >
 > Hint:
 > ~~~
@@ -106,22 +107,22 @@ The file checkmoutput.tsv contains three relevant outputs: completeness, contami
 > > 
 > > ~~~
 > > $ mkdir ~/genomes
-> > $ cp ~/assembly/ERR326690/scaffolds.fasta ~/genomes/ERR326690.fasta
-> > $ cp ~/assembly/ERR326694/scaffolds.fasta ~/genomes/ERR326694.fasta
+> > $ cp ~/assembly/barcode02/assembly.fasta ~/genomes/barcode02.fasta
+> > $ cp ~/assembly/barcode02/assembly.fasta ~/genomes/barcode02.fasta
 > > $ cd ~/genomes/
-> > $ quast.py ERR326690.fasta -o quast_ERR326690 --min-contig 0
+> > $ quast.py barcode02.fasta -o quast_barcode02 --min-contig 0
 > > Open report.html in web browser
 > >
-> > $ checkm taxon_list |grep Streptococcus
+> > $ checkm taxon_list |grep Escherichia
 > > ....
-> > species   Streptococcus pneumoniae                                20           846              160
+> > species   Escherichia coli                                20           846              160
 > > $ cd ~/genomes/
-> > # Analyse a single file in the current folder (the .) that matches ERR326690.fasta. This does not work very well in a loop. 
-> > $ checkm taxonomy_wf species "Streptococcus pneumoniae" . checkmout -t 1 -x ERR326690.fasta  >checkmoutput.tsv
+> > # Analyse a single file in the current folder (the .) that matches barcode02.fasta. This does not work very well in a loop. 
+> > $ checkm taxonomy_wf species "Escherichia coli" . checkmout -t 1 -x barcode02.fasta  >checkmoutput.tsv
 > >
 > > # Alternatively, process all genomes in the "genomes" folder that have the extension fasta. This is useful if you have many genomes to check. 
 > > $ cd ~
-> > $ checkm taxonomy_wf species "Streptococcus pneumoniae" genomes checkmout -t 1 -x fasta  > checkmoutput.tsv
+> > $ checkm taxonomy_wf species "Escherichia coli" genomes checkmout -t 1 -x fasta  > checkmoutput.tsv
 > > $ cat checkmoutput.tsv
 > > ~~~
 > > {: .output}
