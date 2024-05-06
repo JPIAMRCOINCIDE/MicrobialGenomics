@@ -4,18 +4,16 @@ title: "Bacterial GWAS"
 teaching: 0
 exercises: 90
 questions:
-- "Which genes are associated with patient mortality"
+- "Which genes are associated with resistance"
 objectives:
-- "Determine genes significantly associated with patient mortality and speculate why"
+- "Determine genes significantly associated with resistance and speculate why"
 keypoints:
 - "Contigency testing for gene presence absence to associate a genotype with a phenotype, similar to GWAS in clinical genetics is possible with bacterial genomes"
 ---
 
 ## Introduction
 
-As mentioned in the first part of this exercise series, the 62 *S. pneumoniae* isolates were from patients who suffered from a invasive pneumococcal disease (IPD). IPD, especially in elderly is associated with high mortality. The outcome is partially explained by co-morbidities (e.g. diabetes) but there are some indications that it matters which strain of *S. pneumoniae* is causing the infection. 
-
-We will therefore try to find out if there are specific virulence factors that are associated with patient survival. 
+As mentioned in the first part of this exercise series, the 39 *E.coli* isolates were from resistant bacteria. We will therefore try to find out if there are specific genes that are associated with resistance. 
 
 ### Bacterial Genome Wide Association Studies (GWAS)
 
@@ -31,7 +29,7 @@ $ cat annotations.txt |tr "\t" "," > traits.csv
 ~~~
 {: .bash}
 
-We can now combine our gene presence absence table with the patient data and check if there are indeed specific virulence factors associated with patient mortality. We're using the special keyword "ALL" the include all annotation data. The P-value cutoff is 0.01 to limit the output
+We can now combine our gene presence absence table with the patient data and check if there are indeed specific genes associated with resistance. We're using the special keyword "ALL" the include all annotation data. The P-value cutoff is 0.01 to limit the output
 
 ~~~
 $ cd ~/orthology
@@ -40,7 +38,7 @@ $ scoary -t traits.csv -g gene_presence_absence.csv  -p 0.01 --include_input_col
 {: .bash}
 
 
-> ## Discussion: Which genes are associated with patient mortality. Where are they located? what is their function?
-> Download the file mortality_<date>.results.csv and open in Google Spreadsheet or Excel or any other spreadsheet tool. If you have Dutch regional settings, Excel won't recognize the file properly, you may have to adjust these (or use Google Sheets). Investigate the outcome, look at the column with OXC141 as this is a completed reference genome and the order of the genes is known for all genes. Is there something special about the order and location of the genes? It is also possible to open the OXC141 genbank file  [https://klif.uu.nl/klif/mgen/annotation/OXC141/](https://klif.uu.nl/klif/mgen/annotation/OXC141/)  Click to view and search through the text file or right click and save to download and open in IGV ( https://software.broadinstitute.org/software/igv/ ) and view the best score gene(s) there, however it should already be clear from the results.csv file. Also: Remember the figtree visualization of the tree and the coloring of the phenotypes? Generate a similar annotation file with the locus you think is involved in patient mortality and display it in figtree. Does a specific clone carry the virulence factor(s)? 
+> ## Discussion: Which genes are associated with resistance. Where are they located? what is their function?
+> Download the file resistance_<date>.results.csv and open in Google Spreadsheet or Excel or any other spreadsheet tool. If you have Dutch regional settings, Excel won't recognize the file properly, you may have to adjust these (or use Google Sheets). Investigate the outcome,. Is there something special about the order and location of the genes?  Also: Remember the figtree visualization of the tree and the coloring of the phenotypes? Generate a similar annotation file with the locus you think is involved with resistance and display it in figtree. Does a specific clone carry the gene(s)? 
 {: .discussion}
 
