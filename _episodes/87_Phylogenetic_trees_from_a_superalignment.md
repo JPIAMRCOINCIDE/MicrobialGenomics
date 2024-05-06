@@ -30,7 +30,7 @@ $ grep "ribosomal protein" gene_presence_absence.csv
 Thats a large output. As we only want genes present in all isolates we will extract the column with the names (column 1) and the number of isolates (column 5) and use grep to select these. 
 
 ~~~
-$ grep  "ribosomal protein" gene_presence_absence.csv |cut -f 1,5 -d "," |grep 62
+$ grep  "ribosomal protein" gene_presence_absence.csv |cut -f 1,5 -d "," |grep 39
 ~~~
 {: .bash}
 
@@ -39,7 +39,7 @@ Question: how many ribosomal proteins are there? (use wc or just count them)
 Next we do some shell magic to go from a column with names to a comma separated string of gene names and we put that list in the shell variable "list"
 
 ~~~
-$ list=`grep  "ribosomal protein" gene_presence_absence.csv |cut -f 1,5 -d "," |grep 62 |cut -f 1 -d "," |tr -d \" |tr "\n" "," |sed 's/,$//'`
+$ list=`grep  "ribosomal protein" gene_presence_absence.csv |cut -f 1,5 -d "," |grep 39 |cut -f 1 -d "," |tr -d \" |tr "\n" "," |sed 's/,$//'`
 $ echo $list
 ~~~
 {: .bash}
@@ -82,7 +82,7 @@ Inspect the superalignment. How many residues are in the alignment?. Also downlo
 
 ## Visualizing phenotypes
 
-It is possible to color the labels of the trees using the "Import Annotations" option in Figtree. Download the file with annotations here: [annotations.txt](../files/annotations.txt) and import this file. Click on the triangle next to tip labels and select "Colour by". Select "Mortality" in the dropdown box. The isolates in red are the patients who survived the infection. 
+It is possible to color the labels of the trees using the "Import Annotations" option in Figtree. Download the file with annotations here: [annotations.txt](../files/annotations.txt) and import this file. Click on the triangle next to tip labels and select "Colour by". Select "Resistance" in the dropdown box. The isolates in red are the susceptible isolates. 
 
-Is there a specific clone associated with mortality? Inspect both the gene presence absence tree and the tree from the superalignment of ribosomal proteins. 
+Is there a specific clone associated with resistance? Inspect both the gene presence absence tree and the tree from the superalignment of ribosomal proteins. 
 
