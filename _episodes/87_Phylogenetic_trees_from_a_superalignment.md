@@ -5,7 +5,7 @@ teaching: 10
 exercises: 50
 questions:
 - "What is better, a gene presence absence tree or a tree from core genes/proteins"
-- "Is there a specific clone associated with patient mortality"
+- "Is there a specific clone associated with resistance"
 objectives:
 - "How to determine a build a tree from a set of conserved proteins"
 - "Compare the tree with the gene absence presence tree"
