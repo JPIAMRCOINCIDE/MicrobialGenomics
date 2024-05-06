@@ -21,6 +21,14 @@ If you are following this course on your own you can make use of a prerecorded l
 
 The lecture will take approximately 20 minutes. After that there is time for a break and time for asking questions.
 
+Checking the Nanopore sequencing quality can be done using [NanoStat](https://github.com/wdecoster/nanostat) . it generates a quick summary of the number of bases, the number of reads, the length of the reads and the quality of the reads. in general we expect about 40x more bases than the size of the genome and a median read length of >3kb. 
+
+```
+$ cd ~/reads
+$ NanoStat --fastq barcode02.fastq
+$ NanoStat --fastq barcode03.fastq
+```
+
 
 
 
