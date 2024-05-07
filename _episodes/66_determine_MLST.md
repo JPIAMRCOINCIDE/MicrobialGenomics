@@ -2,7 +2,7 @@
 title: "MLST"
 start: false
 teaching: 10
-exercises: 20
+exercises: 30
 questions:
 - "How can we detect the MLST type"
 objectives:
