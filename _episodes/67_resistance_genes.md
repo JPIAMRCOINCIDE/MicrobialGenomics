@@ -18,7 +18,7 @@ keypoints:
 ## ResFinder
 
 [ResFinder](https://bitbucket.org/genomicepidemiology/resfinder/src/master/) is often used to find resistance genes and mutations. The output is human readable. Now that we have assembled our genome we are going to determine which resistance genes and point mutations there are. We are going to use a loop to cycle through the files. This is handy if you have multiple files to process. Resfinder is written in Python, so it must be run through that interpreter.
-Running it to display it on a screen:
+
 ~~~
 $ cd ~/assembly
 $ for sample in barcode02 barcode03
