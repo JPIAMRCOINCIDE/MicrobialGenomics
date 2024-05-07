@@ -33,17 +33,17 @@ $ cat prediction.csv
 {: .bash}
 
 ## Plasmidtyping
-
+It is useful to know which type of plasmids are present in your bacterial genome. We use [Abricate](https://github.com/tseemann/abricate) and the [PlasmidFinder](https://bitbucket.org/genomicepidemiology/plasmidfinder/src/master/) database to find the Inc types or incompability groups. Abricate has different kinds of databases it can use to query a genome. 
 
 ~~~
+$ abricate --list # we check which databases are available. 
 $ cd ~/assembly
 $ for sample in barcode02 barcode03
 > do
->  plasmidtyper --organism Escherichia --nucleotide $sample/assembly.fasta > $sample/plasmidtyper.txt
+>  echo $sample
+>  abricate --db PlasmidFinder $sample/assembly.fasta
+>  echo
 > done
-$ cd barcode02
-$ ls
-$ cat plasmidtyper.txt
 ~~~
 {: .bash}
 
@@ -64,7 +64,7 @@ $ cat plasmidtyper.txt
 > {: .solution}
 {: .challenge}
 
-Where are the genes and where are the point mutations? 
+Where are the genes and where are the point mutations? Can you try other Abricate databases? e.g. VFDB that checks for virulencefactors or ecoh that checks for E. coli serotype genes.
 
 
 {% include links.md %}
