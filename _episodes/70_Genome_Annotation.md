@@ -176,7 +176,6 @@ The .txt files contain some statistics on how many annotated genes are found. Th
 > >  
 > > barcode02/barcode02.txt:CDS: 5500
 > > barcode03/barcode03.txt:CDS: 5514
-
 > > 
 > > These *E. coli* genomes contain approx 5000 coding regions.
 > > ~~~
