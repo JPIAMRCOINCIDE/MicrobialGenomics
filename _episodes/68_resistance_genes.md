@@ -2,7 +2,7 @@
 title: "Resistance genes"
 start: false
 teaching: 10
-exercises: 40
+exercises: 50
 questions:
 - "How can we detect the resistance genes and point mutations"
 objectives:
@@ -52,7 +52,7 @@ $ cat amrfinderplus.txt
 
 > ## Challenge: Are the resistance genes found on a plasmid or on a chromosome?
 >
-> Find out where the genes are located. Pick a resistance gene or point mutation, and see if you can figure out if it is on the chromosome or on a plasmid. 
+> Find out where the genes are located. Pick a resistance gene or point mutation, and see if you can figure out if it is on the chromosome or on a plasmid. Remember the assembly info file, the sequence graph analysis etc. 
 > 
 >
 > Hint:
