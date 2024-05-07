@@ -27,7 +27,7 @@ $ for sample in barcode02 barcode03
 >  mlst $sample/assembly.fasta
 > done
 ~~~
-{: .source}
+{: .bash}
 
 Storing the MLST output in a file:
 ~~~
@@ -38,7 +38,7 @@ $ for sample in barcode02 barcode03
 > done > mlst_output.txt
 $ cat mlst_output.txt
 ~~~
-{: .source}
+{: .bash}
 
 > ## Challenge: Why are some MLST types not found. Compare with your classmates Are they still the same strain?
 >
@@ -60,7 +60,6 @@ $ cat mlst_output.txt
 > >  
 > > 
 > > 
-
 > > 
 > > 
 > > ~~~
