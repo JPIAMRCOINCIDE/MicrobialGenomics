@@ -2,7 +2,7 @@
 start: false
 title: "Lunch break"
 exercises: 0
-teaching: 45
+teaching: 80
 keypoints:
 - "Lunch break"
 ---
