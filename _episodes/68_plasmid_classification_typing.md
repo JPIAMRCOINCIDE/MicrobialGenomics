@@ -37,6 +37,7 @@ An alternative for RFPlasmid is [Platon](https://github.com/oschwengers/platon).
 ~~~
 $  platon assembly.fasta --output output --threads 2 --verbose --db /mnt/data/db/platon/db
 ~~~
+{: .bash}
 
 Please try it yourself. Are there differences in the classification?
 
