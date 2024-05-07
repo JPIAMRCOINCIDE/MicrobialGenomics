@@ -1,8 +1,8 @@
 ---
 start: false
-title: "Lunch break"
+title: "Afternoon break"
 exercises: 0
-teaching: 45
+teaching: 25
 keypoints:
 - "Lunch"
 ---
