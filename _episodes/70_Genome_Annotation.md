@@ -155,6 +155,7 @@ $ cat */*.txt
 
 The .txt files contain some statistics on how many annotated genes are found. The .gbk file contains a human readable format of the annotation, the .gff file a tabular format. Please inspect these files so that you are familiar with their contents. See [https://en.wikipedia.org/wiki/General_feature_format](https://en.wikipedia.org/wiki/General_feature_format) for some more information.  
 
+
 > ## Challenge: How many coding regions did PROKKA find in the contigs?
 >
 > Find out how many coding regions there are in the *E. coli* isolates. Enter your solution in the
