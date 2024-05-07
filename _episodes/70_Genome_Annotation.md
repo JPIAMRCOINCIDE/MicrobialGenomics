@@ -28,7 +28,7 @@ Have a look at the 50 first lines of your genomes using head. In this example th
 ~~~
 $ head -n50 ~/assembly/barcode02/assembly.fasta
 ~~~
-{: .source}
+{: .bash}
 
 
 Let's copy these first 50 lines of the scaffold including the header by moving over it with the mouse and pressing the left mouse button to copy.
