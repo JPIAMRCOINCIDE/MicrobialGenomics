@@ -1,8 +1,8 @@
 ---
 start: false
-title: "Morning break"
+title: "Lunch break"
 exercises: 0
-teaching: 15
+teaching: 80
 keypoints:
 - "coffee or tea"
 ---
