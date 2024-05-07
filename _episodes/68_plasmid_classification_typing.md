@@ -1,8 +1,8 @@
 ---
-title: "plasmid typing and classification"
+title: "Plasmid typing and classification"
 start: false
 teaching: 10
-exercises: 30
+exercises: 50
 questions:
 - "How can we detect which contig is a plasmid and which is from the chromosome"
 objectives:
@@ -31,6 +31,14 @@ $ cd rfplasmid
 $ cat prediction.csv
 ~~~
 {: .bash}
+
+An alternative for RFPlasmid is [Platon](https://github.com/oschwengers/platon). It has very similar performance to RFPlasmid and is slighlty more conservative. I can be run using the following commands:
+
+~~~
+$  platon assembly.fasta --output output --threads 2 --verbose --db /mnt/data/db/platon/db
+~~~
+
+Please try it yourself. Are there differences in the classification?
 
 ## Plasmidtyping
 It is useful to know which type of plasmids are present in your bacterial genome. We use [Abricate](https://github.com/tseemann/abricate) and the [PlasmidFinder](https://bitbucket.org/genomicepidemiology/plasmidfinder/src/master/) database to find the Inc types or incompability groups. Abricate has different kinds of databases it can use to query a genome. 
@@ -64,7 +72,7 @@ $ for sample in barcode02 barcode03
 > {: .solution}
 {: .challenge}
 
-Where are the genes and where are the point mutations? Can you try other Abricate databases? e.g. VFDB that checks for virulencefactors or ecoh that checks for E. coli serotype genes.
+Where are the genes and where are the point mutations? Can you try other Abricate databases? e.g. VFDB that checks for virulencefactors or ecoh that checks for E. coli serotype genes. 
 
 
 {% include links.md %}
