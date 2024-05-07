@@ -2,7 +2,7 @@
 start: false
 title: "Phylogenetic trees from the core genome"
 teaching: 10
-exercises: 50
+exercises: 25
 questions:
 - "What is better, a gene presence absence tree or a tree from core genes/proteins"
 - "Is there a specific clone associated with resistance"
