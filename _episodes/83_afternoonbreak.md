@@ -4,5 +4,5 @@ title: "Afternoon break"
 exercises: 0
 teaching: 25
 keypoints:
-- "Lunch"
+- "afternoon break"
 ---
