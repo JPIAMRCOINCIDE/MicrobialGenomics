@@ -2,7 +2,7 @@
 title: "Resistance genes"
 start: false
 teaching: 10
-exercises: 30
+exercises: 40
 questions:
 - "How can we detect the resistance genes and point mutations"
 objectives:
