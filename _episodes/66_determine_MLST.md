@@ -21,6 +21,7 @@ Now that we have assembled our genome we are going to determine the MLST type. W
 
 Running it to display it on a screen:
 ~~~
+$ mlst --list #check if there is an ecoli scheme (there are two, ecoli_achtman_4 is the correct one). 
 $ cd ~/assembly
 $ for sample in barcode02 barcode03
 > do
@@ -56,7 +57,7 @@ $ cat mlst_output.txt
 > > 
 > > ~~~
 > > $ cd ~/assembly/barcode02/
-> > $ mlst --scheme ecoli --novel novel_alleles.txt assembly.fasta
+> > $ mlst --scheme ecoli_achtman_4 --novel novel_alleles.txt assembly.fasta
 > >  
 > > 
 > > 
