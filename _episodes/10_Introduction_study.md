@@ -43,7 +43,7 @@ $ ls
 
 You will see you have created the folder reads. Next we need to get the appropriate files from the server. Go to the folder /mnt/netappits/users/courses/coincide/ using the terminal. You will need one folder for each sample. In the example I have picked the top two, but please take a look at the  the [Google Sheets table](https://docs.google.com/spreadsheets/d/1KI0KA0Rcbg3pKrFRDKikrj4Mdo5pmV60nOodNzNtZp4/edit?usp=sharing) and write your name in the appropriate field to find out which two samples are assigned to you.
 
-The minknow of Nanopore often generates several "barcode" folders of the samples you sequenced. Each barcode corresponds to one sample. In the folder you will find several files, each has several thousand nanopore reads. We need to combine these reads into a single file so that we can process these further. The command we will be using is [zcat](https://manpages.debian.org/testing/zutils/zcat.1.en.html). This commands combines unzipping a file with displaying it. We will redirect (>) the output into a new file which we can use.
+The MinKNOW software of Nanopore often generates several "barcode" folders of the samples you sequenced. Each barcode corresponds to one sample. In the folder you will find several files, each has several thousand nanopore reads. We need to combine these reads into a single file so that we can process these further. The command we will be using is [zcat](https://manpages.debian.org/testing/zutils/zcat.1.en.html). This commands combines unzipping a file with displaying it. We will redirect (>) the output into a new file which we can use.
 
 ~~~
 $ cd /mnt/netappits/users/courses/coincide/
