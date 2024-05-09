@@ -69,6 +69,7 @@ First we need to figure out which species/genera/families are available as singl
 ~~~
 $ 
 $ checkm taxon_list > taxonlist.txt
+$ cat taxonlist.txt |grep Escherichia
 ~~~
 {: .bash}
 
