@@ -79,7 +79,7 @@ Obviously we want to select the closest match as possible. In the case of e.g. S
 CheckM can be run by the following commandline in the case of an Streptococcus pneumoniae genome called genome.fasta in the current folder (".") using the following command line. All output is stored in the folder checkmout and a useful table is checkmoutput.tsv. 
 ~~~
 $ 
-$ checkm taxonomy_wf species "Streptococcus pneumoniae" . checkmout -t 1 -x genome.fasta  >checkmoutput.tsv
+$ checkm taxonomy_wf species "Streptococcus pneumoniae" . checkmout -t 1 -x fasta  >checkmoutput.tsv
 ~~~
 {: .bash}
 
@@ -117,9 +117,9 @@ The file checkmoutput.tsv contains three relevant outputs: completeness, contami
 > > $ checkm taxon_list |grep Escherichia
 > > ....
 > > species   Escherichia coli                                20           846              160
-> > $ cd ~/genomes/
-> > # Analyse a single file in the current folder (the .) that matches barcode02.fasta. This does not work very well in a loop. 
-> > $ checkm taxonomy_wf species "Escherichia coli" . checkmout -t 1 -x barcode02.fasta  >checkmoutput.tsv
+> > $ cd ~/assembly/barcode02/
+> > # Analyse a file in the current folder (the .) that matches .fasta. This does not work very well in a loop. 
+> > $ checkm taxonomy_wf species "Escherichia coli" . checkmout -t 1 -x fasta  >checkmoutput.tsv
 > >
 > > # Alternatively, process all genomes in the "genomes" folder that have the extension fasta. This is useful if you have many genomes to check. 
 > > $ cd ~
