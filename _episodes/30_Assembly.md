@@ -67,7 +67,7 @@ Nanopore assembly sometimes needs to be polished as well. See the paper by Ryan 
 > 
 > > ## Solution
 > >
-> > 
+> >  You can read the log files for the necessary information, or you can get these from the assembly.fasta file:
 > > ~~~
 > > $ cd ~/assembly
 > > $ grep -c '>'  barcode*/assembly.fasta
