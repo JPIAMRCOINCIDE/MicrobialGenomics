@@ -30,7 +30,7 @@ $ for sample in barcode02 barcode03
 ~~~
 {: .bash}
 
-Storing the MLST output in a file:
+The output of the mlst contains many lines as it checks for every possible species. You can specify an MLST scheme using the --scheme option and you can make it less chatty using the --quiet option. You can also store the actual MLST output in a file and only display the rest of the diagnostic messages on a screen.
 ~~~
 $ cd ~/assembly
 $ for sample in barcode02 barcode03
