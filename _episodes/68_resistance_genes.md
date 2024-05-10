@@ -33,7 +33,7 @@ $ ls
 $ less -S pheno_table.txt
 $ less -S ResFinder_results_table.txt
 $ less -S PointFinder_table.txt
-$ conda deactivate resfinder
+$ conda deactivate
 $ conda activate base
 ~~~
 {: .bash}
@@ -51,7 +51,7 @@ $ for sample in barcode02 barcode03
 > do
 >  amrfinder --organism Escherichia --nucleotide $sample/assembly.fasta > $sample/amrfinderplus.txt
 > done
-$ conda deactivate amrfinderplus
+$ conda deactivate
 $ conda activate base
 $ cd barcode02
 $ ls
