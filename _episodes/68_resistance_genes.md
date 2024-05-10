@@ -17,14 +17,14 @@ keypoints:
 
 ## ResFinder
 
-[ResFinder](https://bitbucket.org/genomicepidemiology/resfinder/src/master/) is often used to find resistance genes and mutations. The output is human readable. Now that we have assembled our genome we are going to determine which resistance genes and point mutations there are. We are going to use a loop to cycle through the files. This is handy if you have multiple files to process. Resfinder is written in Python, so it must be run through that interpreter. It is often installed in its own conda environment because of it's very specific dependencies.
+[ResFinder](https://bitbucket.org/genomicepidemiology/resfinder/src/master/) is often used to find resistance genes and mutations. The output is human readable. Now that we have assembled our genome we are going to determine which resistance genes and point mutations there are. We are going to use a loop to cycle through the files. This is handy if you have multiple files to process. Resfinder is written in Python, so it must be run through that interpreter. It is often installed in its own conda environment because of it's very specific dependencies. We run it with the option --acquired for the resistance genes and --point for the resistance point mutations.
 
 ~~~
 $ conda activate resfinder
 $ cd ~/assembly
 $ for sample in barcode02 barcode03
 > do
->  python -m resfinder  -s "Escherichia coli" --point  -db_point_kma /mnt/data/db/pointfinder_db/ -ifa  $sample/assembly.fasta -o $sample/resfinder
+>  python -m resfinder  -s "Escherichia coli" --point  --acquired -ifa  $sample/assembly.fasta -o $sample/resfinder
 > done
 $ cd barcode02
 $ ls
