@@ -59,7 +59,7 @@ $ for sample in barcode02 barcode03
 
 > ## Challenge: Are the resistance genes found on a plasmid or on a chromosome?
 >
-> Find out where the genes are located. Pick a resistance gene or point mutation from the previous exercise, and see if you can figure out if it is on the chromosome or on a plasmid using this data.  
+> Find out where the genes are located. Pick a resistance gene or point mutation from the previous exercise, and see if you can figure out if it is on the chromosome or on a plasmid using this data. Also find out the incompability group of the plasmid (the PlasmidFinder Inc result). 
 > 
 >
 > Hint:
@@ -73,7 +73,7 @@ $ for sample in barcode02 barcode03
 > {: .solution}
 {: .challenge}
 
-Where are the genes and where are the point mutations? Can you try other Abricate databases? e.g. VFDB that checks for virulencefactors or ecoh that checks for E. coli serotype genes. 
+Can you try other Abricate databases? e.g. VFDB that checks for virulencefactors or ecoh that checks for E. coli serotype genes. 
 
 
 {% include links.md %}
