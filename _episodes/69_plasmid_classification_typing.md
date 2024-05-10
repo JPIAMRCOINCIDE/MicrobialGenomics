@@ -68,7 +68,7 @@ $ for sample in barcode02 barcode03
 > 
 > > ## Solution
 > >
-> > Investigate the RfPlasmid or Platon classification of the contig. Is the resistance gene contig on a chromosomal or plasmid contig.  
+> > Investigate the RfPlasmid or Platon classification of the contig. Is the resistance gene contig on a chromosomal or plasmid contig.  Look up the contig name in the Abricate --db PlasmidFinder output. 
 > > {: .output}
 > {: .solution}
 {: .challenge}
