@@ -32,14 +32,14 @@ $ cat prediction.csv
 ~~~
 {: .bash}
 
-An alternative for RFPlasmid is [Platon](https://github.com/oschwengers/platon). It has very similar performance to RFPlasmid and is slighlty more conservative. I can be run using the following commands:
+An alternative for RFPlasmid is [Platon](https://github.com/oschwengers/platon). It has very similar performance to RFPlasmid and is slighlty more conservative. It can be run using the following commands:
 
 ~~~
 $  platon assembly.fasta --output output --threads 2 --verbose --db /mnt/data/db/platon/db
 ~~~
 {: .bash}
 
-Please try it yourself. Are there differences in the classification?
+Please try it yourself. Try to find the output and open the files. Are there differences in the classification between RFPlasmid and Platon? 
 
 ## Plasmidtyping
 It is useful to know which type of plasmids are present in your bacterial genome. We use [Abricate](https://github.com/tseemann/abricate) and the [PlasmidFinder](https://bitbucket.org/genomicepidemiology/plasmidfinder/src/master/) database to find the Inc types or incompability groups. Abricate has different kinds of databases it can use to query a genome. 
@@ -59,7 +59,7 @@ $ for sample in barcode02 barcode03
 
 > ## Challenge: Are the resistance genes found on a plasmid or on a chromosome?
 >
-> Find out where the genes are located. Pick a resistance gene or point mutation, and see if you can figure out if it is on the chromosome or on a plasmid. 
+> Find out where the genes are located. Pick a resistance gene or point mutation from the previous exercise, and see if you can figure out if it is on the chromosome or on a plasmid using this data.  
 > 
 >
 > Hint:
@@ -68,7 +68,7 @@ $ for sample in barcode02 barcode03
 > 
 > > ## Solution
 > >
-> > Investigate the assembly graph using Bandage. Was it on a smaller circular contig or a large 5 megabase contig?  
+> > Investigate the RfPlasmid or Platon classification of the contig. Is the resistance gene contig on a chromosomal or plasmid contig.  
 > > {: .output}
 > {: .solution}
 {: .challenge}
