@@ -60,6 +60,7 @@ $ cat amrfinderplus.txt
 ~~~
 {: .bash}
 
+Add the number of resistance genes to the Google sheet. 
 
 > ## Challenge: Are the resistance genes found on a plasmid or on a chromosome?
 >
@@ -77,7 +78,7 @@ $ cat amrfinderplus.txt
 > {: .solution}
 {: .challenge}
 
-Where are the genes and where are the point mutations? 
+Where are the genes and where are the point mutations? Add it to the Google sheet. 
 
 
 {% include links.md %}
