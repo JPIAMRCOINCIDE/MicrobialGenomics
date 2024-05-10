@@ -60,7 +60,7 @@ The names of the contigs produced by some assemblers are quite long (Flye works 
 $ cd ~/assembly
 $ for sample in barcode02 barcode03
 > do
->  cut -f 1,2 -d "_" "$sample"/scaffolds.fasta | sed s/contig_/C/g > "$sample".fasta
+>  cut -f 1,2 -d "_" "$sample"/assembly.fasta | sed s/contig_/C/g > "$sample".fasta
 > done
 ~~~
 
@@ -138,7 +138,7 @@ The parameter --prefix assigns the sample name as a prefix to all files. If we o
 ~~~
 $ cd ~/
 $ for sample in barcode02 barcode03 ; do
-  prokka --outdir annotation/"$sample" --prefix $sample assembly/"$sample".fasta --usegenus -genus Escherichia --cpus 1 --rawproduct --locustag $sample
+  prokka --outdir annotation/"$sample" --prefix $sample ~/assembly/"$sample".fasta --usegenus -genus Escherichia --cpus 1 --rawproduct --locustag $sample
 done
 ~~~
 {: .bash}
