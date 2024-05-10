@@ -34,7 +34,7 @@ $ cat resfinder
 ## AMRFinderPlus
 
 [AMRFinderPlus](https://github.com/ncbi/amr) is also used to find resistance genes and mutations. The output is in the form of a table. It is often installed in its own conda environment
-Running it to display it on a screen:
+
 ~~~
 $ cd ~/assembly
 $ conda activate amrfinderplus
