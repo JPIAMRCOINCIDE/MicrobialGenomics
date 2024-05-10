@@ -41,6 +41,8 @@ $ cat mlst_output.txt
 ~~~
 {: .bash}
 
+Add the MLST sequence type to the Google sheet. 
+
 > ## Challenge: Why are some MLST types not found. Compare with your classmates Are they still the same strain?
 >
 > Find out what the allele differences are. If there are new alleles, try to get the novel allele sequences.  
