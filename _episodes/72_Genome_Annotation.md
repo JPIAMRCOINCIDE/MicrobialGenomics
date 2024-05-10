@@ -207,9 +207,9 @@ Repeat the same exercise with the key word 'tRNA' to see how many tRNAs there ar
 > > $ cd ~/annotation/barcode02
 > > $ grep -c "hypothetical protein" barcode02.gbk
 > >  
-> > barcode02/barcode02.txt:CDS: 479
+> > barcode02/barcode02.txt:CDS: 1313
 > > 
-> > About 2500 E. coli genes cannot be assigned a function by Prokka. What would be a method to figure out what these genes are coding for? What could be the reason the number of hypothetical proteins is lower?
+> > About 1300 E. coli genes cannot be assigned a function by Prokka. What would be a method to figure out what these genes are coding for? 
 > > ~~~
 > > {: .output}
 > {: .solution}
