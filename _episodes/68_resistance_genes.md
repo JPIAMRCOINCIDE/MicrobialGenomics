@@ -22,6 +22,7 @@ keypoints:
 ~~~
 $ conda activate resfinder
 $ cd ~/assembly
+$ amrfinder --list_organisms
 $ for sample in barcode02 barcode03
 > do
 >  python -m resfinder  -s "Escherichia coli" --point  --acquired -ifa  $sample/assembly.fasta -o $sample/resfinder
