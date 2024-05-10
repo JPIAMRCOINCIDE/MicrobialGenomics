@@ -28,11 +28,17 @@ $ for sample in barcode02 barcode03
 > done
 $ cd barcode02
 $ ls
-$ cat resfinder
+$ cd resfinder
+$ ls
+$ less -S pheno_table.txt
+$ less -S ResFinder_results_table.txt
+$ less -S PointFinder_table.txt
 $ conda deactivate resfinder
 $ conda activate base
 ~~~
 {: .bash}
+
+The advantage of ResFinder is that it shows the phenotype associated with the resistance gene or mutations. It also shows the location of the resistance genes. The drawback is that is does not show on which contig the resistance causing point mutations are located.
 
 ## AMRFinderPlus
 
