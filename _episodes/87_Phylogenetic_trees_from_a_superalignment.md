@@ -23,14 +23,14 @@ A phylogenetic tree from a single gene may be less informative because it does n
 Ribosomal proteins are generally quite stable and are not under strong diversifying selection, making them ideal candidates to infer the relationship of a set of isolates. We can use grep to extract which genes are annotated as ribosomal proteins.
 
 ~~~
-$ grep "ribosomal protein" gene_presence_absence.csv
+$ grep "ribosomal subunit protein" gene_presence_absence.csv
 ~~~
 {: .bash}
 
-Thats a large output. As we only want genes present in all isolates we will extract the column with the names (column 1) and the number of isolates (column 5) and use grep to select these. 
+Thats a large output. As we only want genes present in all isolates we will extract the column with the names (column 1) and the number of isolates (column 5) and use grep to select these. We have 35 isolates so we grep for the number 35. 
 
 ~~~
-$ grep  "ribosomal protein" gene_presence_absence.csv |cut -f 1,5 -d "," |grep 39
+$ grep  "ribosomal subunit protein" gene_presence_absence.csv |cut -f 1,5 -d "," |grep 35
 ~~~
 {: .bash}
 
@@ -39,7 +39,7 @@ Question: how many ribosomal proteins are there? (use wc or just count them)
 Next we do some shell magic to go from a column with names to a comma separated string of gene names and we put that list in the shell variable "list"
 
 ~~~
-$ list=`grep  "ribosomal protein" gene_presence_absence.csv |cut -f 1,5 -d "," |grep 39 |cut -f 1 -d "," |tr -d \" |tr "\n" "," |sed 's/,$//'`
+$ list=`grep  "ribosomal subunit protein" gene_presence_absence.csv |cut -f 1,5 -d "," |grep 35 |cut -f 1 -d "," |tr -d \" |tr "\n" "," |sed 's/,$//'`
 $ echo $list
 ~~~
 {: .bash}
@@ -47,7 +47,7 @@ $ echo $list
 To extract the gff files, we will make use of the roary script "query_pan_genome". This script can extract information from the gene presence absence file and the gff files which were already prepared before. 
 
 ~~~
-$ cd ~/orthology
+$ cd ~/orthology # if you run Roary multiple times, it will make a new folder called orthology_<random number>. 
 $ query_pan_genome -a gene_multifasta -n $list ~/gff/*.gff
 $ ls
 ~~~
