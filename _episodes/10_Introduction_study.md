@@ -20,7 +20,7 @@ We will be making use of the command line interface on the [Jupyterhub site](htt
 
 ### Dataset
 
-Introduction to the dataset is given in the [presentation](https://klif.uu.nl/klif/coincide/coincide_microbialgenomics_introduction.pdf). In total we will be analyzing 40 E. coli genomes sequencing using Nanopore.
+Introduction to the dataset is given in the [presentation](https://klif.uu.nl/klif/coincide/coincide_microbialgenomics_introduction.pdf). In total we will be analyzing 35 E. coli genomes sequencing using Nanopore.
 
 ### How to login
 
