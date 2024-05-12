@@ -64,11 +64,11 @@ $ ls ~/gff/*.gff
 ~~~
 {: .source}
 
-Then we can go to your home folder again and start roary. The -s option tells it to disregard genetic context, as we are looking at draft assemblies with different contigs and they are not ordered, the -r option generates some interesting plots in R. The 1> and 2> redirect the standard screen output and the error output to a file for later viewing. The -f option tells it where to store the output files (the folder orthology). Roary needs quite some CPU power. We are using the 1> and 2> redirects to store the screen outputs as it generates a lot of noise. 1> redirects the standard output, 2> redirects the error output. 
+Then we can go to your home folder again and start roary. The -s option tells it to disregard genetic context, as we are looking at draft assemblies with different contigs and they are not ordered, the -r option generates some interesting plots in R. The 1> and 2> redirect the standard screen output and the error output to a file for later viewing. The -f option tells it where to store the output files (the folder orthology). The -i 80 options tells Roary to use a sequence identity of 80% when clustering the proteins. The -e -n option tells it to generate a core gene alignment of all core genes (this is slow. consider not using this as it takes overnight to run). The -p 2 option tells it to use 2 CPUs. Roary needs quite some CPU power. We are using the 1> and 2> redirects to store the screen outputs as it generates a lot of noise. 1> redirects the standard output, 2> redirects the error output. 
 
 ~~~
 $ cd ~
-$ roary ~/gff/*.gff -s -r -f orthology >roary.stdout.log 2> roary.error.log
+$ roary ~/gff/*.gff -s -r -f orthology -i 80 -p 2 -e -n >roary.stdout.log 2> roary.error.log
 ~~~
 {: .bash}
 
