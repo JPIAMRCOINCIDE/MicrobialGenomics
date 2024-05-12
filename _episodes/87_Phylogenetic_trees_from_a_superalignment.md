@@ -16,7 +16,7 @@ keypoints:
 
 ## Building a super alignment tree
 
-A phylogenetic tree from a single gene may be less informative because it does not contain enough information. One solution is to build a tree from a set of concatenated core genes. This is a fairly difficult exercise so this will be done step-by-step.
+A phylogenetic tree from a single gene may be less informative because it does not contain enough information. One solution is to build a tree from a set of concatenated core genes. This is a fairly difficult exercise so this will be done step-by-step. An alternative is to have this done by Roary using the "-e -n" option, where it will use all core genes determined automatically. This takes a lot of time and may not be feasible when you are following this course instructor-led.  
 
 ## Extracting sequences of ribosomal proteins
 
