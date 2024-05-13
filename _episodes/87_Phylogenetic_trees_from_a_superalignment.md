@@ -30,7 +30,7 @@ $ grep "ribosomal subunit protein" gene_presence_absence.csv
 Thats a large output. As we only want genes present in all isolates we will extract the column with the names (column 1) and the number of isolates (column 5) and use grep to select these. We have 35 isolates so we grep for the number 35. 
 
 ~~~
-$ grep  "ribosomal subunit protein" gene_presence_absence.csv |cut -f 1,5 -d "," |grep 35
+$ grep  "ribosomal subunit protein" gene_presence_absence.csv |cut -f 1,4,5 -d "," |grep 35
 ~~~
 {: .bash}
 
