@@ -11,4 +11,4 @@ keypoints:
 ---
 
 ## Wrapup
-Colistin resistance is associated with mcr-1
+Colistin resistance is associated with mcr-1. MCR-1 is a lipid A phosphoethanolamine transferase (EptA) protein. 
