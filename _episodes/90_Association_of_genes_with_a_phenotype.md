@@ -13,27 +13,26 @@ keypoints:
 
 ## Introduction
 
-As mentioned in the first part of this exercise series, the 39 *E.coli* isolates were from resistant bacteria. We will therefore try to find out if there are specific genes that are associated with resistance. 
+As mentioned in the first part of this exercise series, the 34 *E.coli* isolates were from resistant bacteria. We will therefore try to find out if there are specific genes that are associated with resistance. 
 
 ### Bacterial Genome Wide Association Studies (GWAS)
 
 An excellent primer on bacterial GWAS is available here: [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3743258/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3743258/) . We will make use of the tool "Scoary" [https://github.com/AdmiralenOla/Scoary](https://github.com/AdmiralenOla/Scoary), a tool complementary to Roary. Scoary has implemented several GWAS methods into one tool. Scoary needs a **comma** separated list of strain characteristics or phenotypes called traits.csv. 
 
-Copy and paste the columns with the names and patient outcome from the tab "annotations.txt" in a file from the assembly statistics excel file, including the "Name<tab>Mortality" header. Any texteditor can be used but in this example nano is used. You can also get the file from the previous lesson. The file is here:  [https://klif.uu.nl/klif/mgen/orthology/](https://klif.uu.nl/klif/mgen/orthology/), right click on annotations.txt, "save link as". The file can also be made on your own computer and uploaded using your webbrowser. The header (first line) should start with "Name" (replace the word "Isolate") followed by the phenotype (Mortality). 
+Copy and paste the columns with the names and resistance from the tab "annotations.txt" in a file from the assembly statistics excel file, including the "Name<tab>Resistance" header. Any texteditor can be used but in this example nano is used. You can also get the file from the previous lesson. The file can also be made on your own computer and uploaded using your webbrowser. The header (first line) should always start with "Name" followed by the phenotype (Resistance). 
 
 ~~~
 $ cd ~/orthology
-$ wget https://klif.uu.nl/klif/mgen/orthology/annotations.txt
-$ nano annotations.txt #change Isolate to Name
+$ nano annotations.txt #paste the sheet annotations.txt into the file
 $ cat annotations.txt |tr "\t" "," > traits.csv
 ~~~
 {: .bash}
 
-We can now combine our gene presence absence table with the patient data and check if there are indeed specific genes associated with resistance. We're using the special keyword "ALL" the include all annotation data. The P-value cutoff is 0.01 to limit the output
+We can now combine our gene presence absence table with the patient data and check if there are indeed specific genes associated with resistance. We're using the special keyword "ALL" the include all annotation data. The P-value cutoff is 0.05 to limit the output
 
 ~~~
 $ cd ~/orthology
-$ scoary -t traits.csv -g gene_presence_absence.csv  -p 0.01 --include_input_columns ALL
+$ scoary -t traits.csv -g gene_presence_absence.csv  -p 0.05 --include_input_columns ALL
 ~~~
 {: .bash}
 
