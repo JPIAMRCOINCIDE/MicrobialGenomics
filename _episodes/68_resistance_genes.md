@@ -22,7 +22,6 @@ keypoints:
 ~~~
 $ conda activate resfinder
 $ cd ~/assembly
-$ amrfinder --list_organisms
 $ for sample in barcode02 barcode03
 > do
 >  python -m resfinder  -s "Escherichia coli" --point  --acquired -ifa  $sample/assembly.fasta -o $sample/resfinder
@@ -48,6 +47,7 @@ The advantage of ResFinder is that it shows the phenotype associated with the re
 ~~~
 $ cd ~/assembly
 $ conda activate amrfinderplus
+$ amrfinder --list_organisms
 $ for sample in barcode02 barcode03
 > do
 >  amrfinder --organism Escherichia --nucleotide $sample/assembly.fasta > $sample/amrfinderplus.txt
