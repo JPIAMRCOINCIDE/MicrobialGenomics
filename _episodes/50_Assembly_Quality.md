@@ -45,7 +45,7 @@ $ quast.py assembly.fasta -o quast_barcode02 --min-contig 0
 
 The contig sizes from an assembly by Flye can be obtained by:
 ~~~
-$ cat scaffolds.fasta  |grep ">" |cut -f 4 -d _
+$ cat assembly.fasta  |grep ">" |cut -f 4 -d _
 ~~~
 {: .bash}
 
