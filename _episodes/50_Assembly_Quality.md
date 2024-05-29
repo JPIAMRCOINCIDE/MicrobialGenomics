@@ -46,7 +46,7 @@ $ quast.py assembly.fasta -o quast_barcode02 --min-contig 0
 Access the folder using your webbrowser and go to the right folder. 
 
 
-#### Question 1: Determine the N50 and number of contigs by hand and by using the QUAST tool with and without the --min-contig option. Is there a difference? why? 
+#### Question 1: Determine the N50 and number of contigs by using the QUAST tool with and without the --min-contig option. Is there a difference? why? 
 
 #### Question 2: Think of a few situations where comparing the genome size, number of contigs or N50 would be less useful
 
