@@ -84,7 +84,7 @@ $ roary ~/gff/*.gff -s -r -f orthology -i 80 -p 2 -e -n >roary.stdout.log 2> roa
 Some genes are present in all genomes, some are present in some and absent in others. Data on presence and absence of genes was collected in a matrix called gene_presence_absence.csv. Clustering of this information was used to build a tree (available as accessory_binary_genes.fa.newick). As a next step we are going to visualize this clustering.
 
 
-> ## Challenge: Which isolate(s) is/are related to our reference genome OXC141 based on gene presence/absence??
+> ## Challenge: Which isolate(s) is/are related to genome barcode02 based on gene presence/absence??
 >
 > Copy accessory_binary_genes.fa.newick and gene_presence_absence.csv to your own computer. 
 > Open [phandango](http://jameshadfield.github.io/phandango/) in Chrome, drop file accessory_binary_genes.fa.newick and
