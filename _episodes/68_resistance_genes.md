@@ -46,7 +46,7 @@ The advantage of ResFinder is that it shows the phenotype associated with the re
 
 ~~~
 $ cd ~/assembly
-$ conda activate amrfinderplus
+$ conda activate amrfinder
 $ amrfinder --list_organisms
 $ for sample in barcode02 barcode03
 > do
