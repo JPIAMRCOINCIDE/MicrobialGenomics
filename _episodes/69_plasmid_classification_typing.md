@@ -32,7 +32,7 @@ $ cat prediction.csv
 ~~~
 {: .bash}
 
-An alternative for RFPlasmid is [Platon](https://github.com/oschwengers/platon). It has very similar performance to RFPlasmid and is slighlty more conservative. It can be run using the following commands:
+An alternative for RFPlasmid is [Platon](https://github.com/oschwengers/platon). It has very similar performance to RFPlasmid and is slightly more conservative. It can be run using the following commands:
 
 ~~~
 $  platon assembly.fasta --output output --threads 2 --verbose --db /mnt/data/db/platon/db
