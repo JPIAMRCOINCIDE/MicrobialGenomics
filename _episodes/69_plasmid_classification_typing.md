@@ -50,7 +50,7 @@ $ cd ~/assembly
 $ for sample in barcode02 barcode03
 > do
 >  echo $sample
->  abricate --db PlasmidFinder $sample/assembly.fasta
+>  abricate --db plasmidfinder $sample/assembly.fasta
 >  echo
 > done
 ~~~
