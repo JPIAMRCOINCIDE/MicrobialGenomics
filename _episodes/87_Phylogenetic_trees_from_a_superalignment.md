@@ -73,12 +73,21 @@ $ ls
 We have now aligned all protein sequences. Furthermore, we have replaced the names of the protein names with only their isolate names (using the cut -f 1 -d _ option). This is needed as we want to concatenate every sequence with the same name using catfasta2phyml.pl (https://github.com/nylander/catfasta2phyml), followed by building a tree with fasttree (http://www.microbesonline.org/fasttree/).
 
 ~~~
+$ cd ~/orthology
 $ catfasta2phyml.pl aligned* -f  > superalignment.fasta
 $ FastTree superalignment.fasta > superalignment.tree
 ~~~
 {: .bash} 
 
-Inspect the superalignment. How many residues are in the alignment?. Also download the tree and view it using Figtree which can be downloaded here: [https://github.com/rambaut/figtree/releases](https://github.com/rambaut/figtree/releases) . An alternative is [iTOL](https://itol.embl.de/upload.cgi) . Does it look comparable to the gene presence absence tree?  Look at the reference isolate. FastTree is a tool for a quick first tree. Better tools would be RaxML (https://cme.h-its.org/exelixis/web/software/raxml/) or IQ-TREE (http://www.iqtree.org/) however these take quite some time to run.
+If you have made the core gene alignment using the -e -n option in Roary (see previous exercise), then we can build the super alignment tree from all core genes. This may take some time.
+
+~~~
+$ cd ~/orthology
+$ FastTree core_gene_alignment.aln >  core_gene_alignment.tree
+~~~
+{: .bash} 
+
+Inspect the superalignment. How many bases are in the alignment?. Also download the tree and view it using Figtree which can be downloaded here: [https://github.com/rambaut/figtree/releases](https://github.com/rambaut/figtree/releases) . An alternative is [iTOL](https://itol.embl.de/upload.cgi) . Does it look comparable to the gene presence absence tree?  Look at the reference isolate. FastTree is a tool for a quick first tree. Better tools would be RaxML (https://cme.h-its.org/exelixis/web/software/raxml/) or IQ-TREE (http://www.iqtree.org/) however these take quite some time to run.
 
 ## Visualizing phenotypes
 
