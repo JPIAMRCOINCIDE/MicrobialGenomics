@@ -21,7 +21,7 @@ keypoints:
 
 ~~~
 $ cd ~/assembly
-$ mkdir ~assembly/genomes
+$ mkdir ~/assembly/genomes
 $ cp ~/assembly/barcode02/assembly.fasta ~/assembly/genomes/barcode02.fasta
 $ cp ~/assembly/barcode03/assembly.fasta ~/assembly/genomes/barcode03.fasta
 $ cd ~/assembly
