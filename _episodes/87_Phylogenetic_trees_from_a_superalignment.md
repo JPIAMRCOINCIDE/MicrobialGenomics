@@ -75,7 +75,7 @@ We have now aligned all protein sequences. Furthermore, we have replaced the nam
 ~~~
 $ cd ~/orthology
 $ catfasta2phyml.pl aligned* -f  > superalignment.fasta
-$ FastTree -nt superalignment.fasta > superalignment.tree
+$ FastTree superalignment.fasta > superalignment.tree
 ~~~
 {: .bash} 
 
@@ -83,7 +83,7 @@ If you have made the core gene alignment using the -e -n option in Roary (see pr
 
 ~~~
 $ cd ~/orthology_en
-$ FastTree core_gene_alignment.aln >  core_gene_alignment.tree
+$ FastTree -nt core_gene_alignment.aln >  core_gene_alignment.tree
 ~~~
 {: .bash} 
 
