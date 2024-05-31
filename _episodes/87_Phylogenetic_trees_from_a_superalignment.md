@@ -44,7 +44,7 @@ $ echo $list
 ~~~
 {: .bash}
 
-To extract the gff files, we will make use of the roary script "query_pan_genome". This script can extract information from the gene presence absence file and the gff files which were already prepared before. 
+To extract the protein sequences from the gff files, we will make use of the roary script "query_pan_genome". This script can extract information from the gene presence absence file and the gff files which were already prepared before. 
 
 ~~~
 $ cd ~/orthology # if you run Roary multiple times, it will make a new folder called orthology_<random number>. 
