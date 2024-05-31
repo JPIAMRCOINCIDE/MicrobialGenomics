@@ -91,7 +91,7 @@ Inspect the superalignment. How many bases are in the alignment?. Also download 
 
 ## Visualizing phenotypes
 
-It is possible to color the labels of the trees using the "Import Annotations" option in Figtree. Download the file with annotations here: [annotations.txt](../files/annotations.txt) and import this file. Click on the triangle next to tip labels and select "Colour by". Select "Resistance" in the dropdown box. The isolates in red are the susceptible isolates. 
+It is possible to color the labels of the trees using the "Import Annotations" option in Figtree or the "Datasets" option in [https://itol.embl.de/](iTOL). Download the file with annotations here: [annotations.txt](../files/annotations.txt) and import this file. Click on the triangle next to tip labels and select "Colour by". Select "Resistance" in the dropdown box. The isolates in red are the susceptible isolates. 
 
-Is there a specific clone associated with resistance? Inspect both the gene presence absence tree and the tree from the superalignment of ribosomal proteins. 
+Is there a specific clone associated with resistance? We have seen it already in the gene presence absence tree. Inspect both the gene presence absence tree and the tree from the superalignment of ribosomal proteins/all core genes. 
 
