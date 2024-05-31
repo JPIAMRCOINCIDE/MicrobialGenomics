@@ -27,10 +27,10 @@ $ grep "ribosomal subunit protein" gene_presence_absence.csv
 ~~~
 {: .bash}
 
-Thats a large output. As we only want genes present in all isolates we will extract the column with the names (column 1) and the number of isolates (column 5) and use grep to select these. We have 34 isolates that have good quality genomes so we grep for the number 34. 
+Thats a large output. As we only want genes present in all isolates we will extract the column with the names (column 1) and the number of isolates (column 5) and use grep to select these. We have 33 isolates that have good quality genomes so we grep for the number 33. 
 
 ~~~
-$ grep  "ribosomal subunit protein" gene_presence_absence.csv |cut -f 1,4,5 -d "," |grep 34
+$ grep  "ribosomal subunit protein" gene_presence_absence.csv |cut -f 1,4,5 -d "," |grep 33
 ~~~
 {: .bash}
 
@@ -39,7 +39,7 @@ Question: how many ribosomal proteins are there? (use wc or just count them)
 Next we do some shell magic to go from a column with names to a comma separated string of gene names and we put that list in the shell variable "list" . We only want proteins that occur in 34 isolates and 1 copy per genome (so 34 proteins in total per gene). 
 
 ~~~
-$ list=`grep "ribosomal subunit protein" gene_presence_absence.csv | cut -f 1,4,5 -d "," |grep '"34","34"' | cut -f 1 -d "," |tr -d \" |tr "\n" "," |sed 's/,$//'`
+$ list=`grep "ribosomal subunit protein" gene_presence_absence.csv | cut -f 1,4,5 -d "," |grep '"33","33"' | cut -f 1 -d "," |tr -d \" |tr "\n" "," |sed 's/,$//'`
 $ echo $list
 ~~~
 {: .bash}
@@ -82,7 +82,7 @@ $ FastTree superalignment.fasta > superalignment.tree
 If you have made the core gene alignment using the -e -n option in Roary (see previous exercise), then we can build the super alignment tree from all core genes. This may take some time.
 
 ~~~
-$ cd ~/orthology
+$ cd ~/orthology_en
 $ FastTree core_gene_alignment.aln >  core_gene_alignment.tree
 ~~~
 {: .bash} 
