@@ -36,7 +36,7 @@ $ grep  "ribosomal subunit protein" gene_presence_absence.csv |cut -f 1,4,5 -d "
 
 Question: how many ribosomal proteins are there? (use wc or just count them)
 
-Next we do some shell magic to go from a column with names to a comma separated string of gene names and we put that list in the shell variable "list" . We only want proteins that occur in 34 isolates and 1 copy per genome (so 34 proteins in total per gene). 
+Next we do some shell magic to go from a column with names to a comma separated string of gene names and we put that list in the shell variable "list" . We only want proteins that occur in 33 isolates and 1 copy per genome (so 33 proteins in total per gene). 
 
 ~~~
 $ list=`grep "ribosomal subunit protein" gene_presence_absence.csv | cut -f 1,4,5 -d "," |grep '"33","33"' | cut -f 1 -d "," |tr -d \" |tr "\n" "," |sed 's/,$//'`
