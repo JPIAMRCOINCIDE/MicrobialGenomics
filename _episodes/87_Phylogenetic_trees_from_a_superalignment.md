@@ -11,7 +11,7 @@ objectives:
 - "Compare the tree with the gene absence presence tree"
 - "Colour the tree with annotation data"
 keypoints:
-- "A tree can be generated from a combined set of proteins for better resolution"
+- "A tree can be generated from a combined set of proteins for better resolution. More proteins = more resolution"
 ---
 
 ## Building a super alignment tree
