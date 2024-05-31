@@ -81,9 +81,22 @@ $ FastTree superalignment.fasta > superalignment.tree
 
 If you have made the core gene alignment using the -e -n option in Roary (see previous exercise), then we can build the super alignment tree from all core genes. This may take some time.
 
+You can choose two methods:
+
+Quick method. Less precise. This extracts only the SNPs and uses FastTree in the fastest setting
 ~~~
 $ cd ~/orthology_en
-$ FastTree -nt core_gene_alignment.aln >  core_gene_alignment.tree
+$ snp-sites core_gene_alignment.aln > snpsites.core_gene_alignment.aln
+$ FastTree -nt -fastest snpsites.core_gene_alignment.aln > snpsites.core_gene_alignment.tree
+~~~
+{: .bash} 
+
+OR
+
+More precise method. Can be very slow. This uses the complete core gene superalignment
+~~~
+$ cd ~/orthology_en
+$ FastTree -nt core_gene_alignment.aln > core_gene_alignment.tree
 ~~~
 {: .bash} 
 
