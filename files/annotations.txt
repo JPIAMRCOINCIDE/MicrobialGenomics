@@ -19,7 +19,6 @@ barcode39	0
 barcode40	0
 barcode41	0
 barcode54	1
-barcode55	0
 barcode57	1
 barcode58	0
 barcode59	1
