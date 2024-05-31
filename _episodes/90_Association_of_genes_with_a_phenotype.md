@@ -23,7 +23,7 @@ Copy and paste the columns with the names and resistance from the tab "annotatio
 
 ~~~
 $ cd ~/orthology
-$ nano annotations.txt #paste the sheet annotations.txt into the file
+$ nano annotations.txt #paste the sheet annotations.txt into the file. please remove any empty lines at the bottom of the textfile
 $ cat annotations.txt |tr "\t" "," > traits.csv
 ~~~
 {: .bash}
