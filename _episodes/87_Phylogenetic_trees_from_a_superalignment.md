@@ -75,7 +75,7 @@ We have now aligned all protein sequences. Furthermore, we have replaced the nam
 ~~~
 $ cd ~/orthology
 $ catfasta2phyml.pl aligned* -f  > superalignment.fasta
-$ FastTree superalignment.fasta > superalignment.tree
+$ FastTree -nt superalignment.fasta > superalignment.tree
 ~~~
 {: .bash} 
 
